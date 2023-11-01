@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import{ Constants } from '@data/constants/constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RickyMortyApiService {
 
-  constructor() { }
+  private baseCharacters = Constants.API_ENDPOINT_CHARACTER;
+  constructor() { 
+  }
+
+  
 }
