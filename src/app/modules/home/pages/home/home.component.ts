@@ -1,6 +1,7 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Result } from '@app/data/interfaces/character.interface';
 import { RickyMortyApiService } from '@app/data/servicesapi/ricky-morty-api.service';
+import { ToTopBtnComponent } from '@app/shared/components/to-top-btn/to-top-btn.component';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,10 @@ import { RickyMortyApiService } from '@app/data/servicesapi/ricky-morty-api.serv
 })
 export class HomeComponent implements OnInit {
 
+  @ViewChild('toTopBtn') toTopBtn!: ToTopBtnComponent;
+
   characters: Result[] = [];
   pagesNum: number = 2;
-  scrolled: boolean = false;
   additionalSearchParameters: string = '';
 
   constructor(
@@ -48,22 +50,7 @@ export class HomeComponent implements OnInit {
       this.getMoreCharacters();
     }
 
-    this.backToTopBtnDisplay();
-  }
-
-
-  //when to show the button to go th the top
-  backToTopBtnDisplay() {
-    if (window.scrollY >= window.innerHeight) {
-      this.scrolled = true;
-    } else {
-      this.scrolled = false;
-    }
-  }
-
-  //move page to top
-  backToTop() {
-    scrollTo(0, 0);
+    this.toTopBtn.backToTopBtnDisplay();
   }
 
   addSearchParameters(parameter: string, paramValue: string){
