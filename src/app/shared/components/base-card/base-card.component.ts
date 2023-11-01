@@ -38,7 +38,7 @@ export class BaseCardComponent {
     if(species === 'Human'){
       return "fa-solid fa-person";
     } else {
-      return "fa-brands fa-space-awesome";
+      return "fa-brands fa-space-awesome"
     }
   }
 }

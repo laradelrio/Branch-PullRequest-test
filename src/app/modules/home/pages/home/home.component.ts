@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   characters: Result[] = [];
   pagesNum: number = 2;
   scrolled: boolean = false;
+  additionalSearchParameters: string = '';
 
   constructor(
     private rmApiService: RickyMortyApiService,
@@ -22,12 +23,14 @@ export class HomeComponent implements OnInit {
   }
 
   getCharacter() {
-    this.rmApiService.getCharacter(1)
+    this.rmApiService.getCharacter(1, this.additionalSearchParameters)
       .subscribe((resp) => this.characters = resp.results)
+
+      this.additionalSearchParameters='';
   }
 
   getMoreCharacters() {
-    this.rmApiService.getCharacter(this.pagesNum)
+    this.rmApiService.getCharacter(this.pagesNum, this.additionalSearchParameters)
       .subscribe((resp) => resp.results.forEach((result) =>
         this.characters.push(result))
       );
@@ -62,4 +65,15 @@ export class HomeComponent implements OnInit {
   backToTop() {
     scrollTo(0, 0);
   }
+
+  addSearchParameters(parameter: string, paramValue: string){
+    this.additionalSearchParameters += `&${parameter}=${paramValue}`;
+  }
+
+  //add search input to api call url
+  addSearchedValue(value: string){
+    this.addSearchParameters('name', value);
+    this.getCharacter();
+  }
+
 }
