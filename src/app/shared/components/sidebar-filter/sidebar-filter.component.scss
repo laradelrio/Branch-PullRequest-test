@@ -1,8 +1,8 @@
-.filter-option{
-    &:hover{
+.filter-option {
+    &:hover {
         font-size: large;
         font-weight: bold;
-    } 
+    }
 }
 
 .accordion-button:not(.collapsed) {
@@ -11,45 +11,34 @@
     font-weight: bold;
 }
 
-.accordion-button{
-    &:focus{
-    box-shadow: 0px 0px 5px #0E393F;
+.accordion-button {
+    &:focus {
+        box-shadow: 0px 0px 5px #0E393F;
     }
 }
 
-.filters-applied{
+.filters-applied {
     background: #0D7C85;
 }
 
-.filter-bubble{
-    border: solid #C0DF40 ;
+.filter-bubble {
+    border: solid #C0DF40;
     border-radius: 30px;
     font-weight: bold;
     color: #0D7C85;
     white-space: nowrap;
-   max-width: fit-content;
+    max-width: fit-content;
 }
 
-.trash-btn{
+.trash-btn {
     color: #0D7C85;
-    &:focus{
+
+    &:focus {
         border: none;
     }
 }
 
-.sidebar{
-    position: absolute;
-    left: 1rem;
-    top:20rem;
-    width: 14rem;
-    
-}
+.sidebar {
+    margin-left: 20px;
 
-@media (max-width: 576px){
-  .sidebar{
-    position: relative;
-    left: ((25%/2));
-    top: auto;
-    width: 75%;
-  }
 }

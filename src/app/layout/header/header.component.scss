@@ -1,3 +1,12 @@
-img{
+img {
+    padding-top: 20px;
     max-height: 10rem;
+}
+
+
+@media (max-width: 576px) {
+    img {
+        max-height: 100px;
+    }
+
 }

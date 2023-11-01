@@ -1,9 +1,12 @@
 <app-shared-search-bar (searchClicked)="addSearchedValue($event)"></app-shared-search-bar>
-<app-shared-sidebar-filter (filterClicked)="addFilterParameters($event)"></app-shared-sidebar-filter>
-<div class="container d-flex col justify-content-center flex-wrap align-items-center">
-    <div *ngFor="let character of characters" class="m-4">
-        <app-shared-base-card [content]="character"></app-shared-base-card>
+<div class="d-flex flex-wrap col justify-content-center">
+    <app-shared-sidebar-filter (filterClicked)="addFilterParameters($event)" class="col-2"></app-shared-sidebar-filter>
+    <div class="container d-flex col justify-content-center flex-wrap align-items-center">
+        <div *ngFor="let character of characters" class="m-4">
+            <app-shared-base-card [content]="character"></app-shared-base-card>
+        </div>
     </div>
 </div>
+
 
 <app-shared-to-top-btn #toTopBtn></app-shared-to-top-btn>
