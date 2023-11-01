@@ -15,8 +15,8 @@ export class RickyMortyApiService {
   ) { 
   }
 
-  getCharacter(): Observable<CharacterAPIResp>{
-    return this.http.get<CharacterAPIResp>(this.baseCharacter);
+  getCharacter(pageNum: number): Observable<CharacterAPIResp>{
+    return this.http.get<CharacterAPIResp>(`${this.baseCharacter}?page=${pageNum}`);
   }
 
   
