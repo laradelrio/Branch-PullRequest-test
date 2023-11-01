@@ -1,0 +1,93 @@
+<div class="sidebar">
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="bg-white rounded-top">
+            <p class="filters-applied rounded-top p-3 m-0 text-white fw-bold">Filters Applied</p>
+            <div class="d-flex col flex-wrap justify-content-center align-items-center">
+                <div *ngIf="statusSelected !== ''" class="filter-bubble ps-3 m-2">
+                    {{statusSelected | titlecase}}
+                    <button class="btn trash-btn" (click)="changeStatusSelected('')"><i
+                            class="fa-solid fa-trash-can"></i></button>
+                </div>
+                <div *ngIf="speciesSelected !== ''" class="filter-bubble ps-3 m-2">
+                    {{speciesSelected | titlecase }}
+                    <button class="btn trash-btn" (click)="changeSpeciesSelected('')"><i
+                            class="fa-solid fa-trash-can"></i></button>
+                </div>
+                <div *ngIf="genderSelected !== ''" class="filter-bubble ps-3 m-2">
+                    {{genderSelected | titlecase}}
+                    <button class="btn trash-btn" (click)="changeGenderSelected('')"><i
+                            class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Status
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                    <div class="filter-option border-bottom w-100 mb-1" (click)="changeStatusSelected('Alive')">
+                        <p> <i class="fas fa-heartbeat pe-3" style="color: #0de74f;"></i> Alive </p>
+                    </div>
+                    <div class="filter-option border-bottom w-100 mb-1 pt-2" (click)="changeStatusSelected('Dead')">
+                        <p> <i class="fas fa-skull pe-3" style="color: #e70d0d;"></i> Dead </p>
+                    </div>
+                    <div class="filter-option w-100 pt-2" (click)="changeStatusSelected('unknown')">
+                        <p> <i class="fas fa-question-circle pe-3"></i> Unknown </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    Species
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                    <div class="filter-option border-bottom w-100 mb-1" (click)="changeSpeciesSelected('Human')">
+                        <p> <i class="fa-solid fa-person pe-3"></i> Human </p>
+                    </div>
+                    <div class="filter-option border-bottom w-100 mb-1 pt-2" (click)="changeSpeciesSelected('Alien')">
+                        <p> <i class="fa-brands fa-space-awesome pe-3"></i> Alien </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree">
+                    Gender
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+                    <div class="filter-option border-bottom w-100 mb-1" (click)="changeGenderSelected('female')">
+                        <p> <i class="fa-solid fa-child-dress pe-3"></i> Female </p>
+                    </div>
+                    <div class="filter-option border-bottom w-100 mb-1 pt-2" (click)="changeGenderSelected('male')">
+                        <p> <i class="fa-solid fa-child pe-3"></i> Male </p>
+                    </div>
+                    <div class="filter-option border-bottom w-100 mb-1" (click)="changeGenderSelected('genderless')">
+                        <p> <i class="fa-regular fa-user pe-3"></i> Genderless </p>
+                    </div>
+                    <div class="filter-option border-bottom w-100 mb-1 pt-2" (click)="changeGenderSelected('unknown')">
+                        <p> <i class="fa-solid fa-question pe-3"></i> Unknown </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

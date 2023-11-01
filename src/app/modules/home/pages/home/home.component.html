@@ -1,8 +1,9 @@
 <app-shared-search-bar (searchClicked)="addSearchedValue($event)"></app-shared-search-bar>
+<app-shared-sidebar-filter (filterClicked)="addFilterParameters($event)"></app-shared-sidebar-filter>
 <div class="container d-flex col justify-content-center flex-wrap align-items-center">
     <div *ngFor="let character of characters" class="m-4">
         <app-shared-base-card [content]="character"></app-shared-base-card>
     </div>
 </div>
 
-<app-to-top-btn #toTopBtn></app-to-top-btn>
+<app-shared-to-top-btn #toTopBtn></app-shared-to-top-btn>

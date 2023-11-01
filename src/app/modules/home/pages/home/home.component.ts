@@ -14,7 +14,8 @@ export class HomeComponent implements OnInit {
 
   characters: Result[] = [];
   pagesNum: number = 2;
-  additionalSearchParameters: string = '';
+  filterParameters: string = '';
+  searchValue: string = '';
 
   constructor(
     private rmApiService: RickyMortyApiService,
@@ -25,14 +26,14 @@ export class HomeComponent implements OnInit {
   }
 
   getCharacter() {
-    this.rmApiService.getCharacter(1, this.additionalSearchParameters)
+    this.rmApiService.getCharacter(1, this.searchValue, this.filterParameters)
       .subscribe((resp) => this.characters = resp.results)
 
-      this.additionalSearchParameters='';
+      this.searchValue='';
   }
 
   getMoreCharacters() {
-    this.rmApiService.getCharacter(this.pagesNum, this.additionalSearchParameters)
+    this.rmApiService.getCharacter(this.pagesNum, this.searchValue, this.filterParameters)
       .subscribe((resp) => resp.results.forEach((result) =>
         this.characters.push(result))
       );
@@ -53,13 +54,14 @@ export class HomeComponent implements OnInit {
     this.toTopBtn.backToTopBtnDisplay();
   }
 
-  addSearchParameters(parameter: string, paramValue: string){
-    this.additionalSearchParameters += `&${parameter}=${paramValue}`;
+  addFilterParameters(parameters: string){
+    this.filterParameters = parameters;
+    this.getCharacter();
   }
 
   //add search input to api call url
   addSearchedValue(value: string){
-    this.addSearchParameters('name', value);
+    this.searchValue = `&name${value}`;
     this.getCharacter();
   }
 
