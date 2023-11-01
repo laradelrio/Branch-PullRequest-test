@@ -1,0 +1,46 @@
+<div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="image-flip">
+        <div class="mainflip flip-0">
+            <div class="frontside">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p><img class=" img-fluid" [src]="content.image" alt="card image"></p>
+                        <div class="front-content pt-2 rounded">
+                            <h4 class="card-title text-white"> <strong>{{content.name}}</strong></h4>
+                            <div class="d-flex justify-content-center align-items-center pt-2">
+                                <p class="pe-3"> <i [ngClass]="getStatusIcon(content.status)" class="pe-2"
+                                        [ngStyle]="{'color': getStatusColor(content.status)}"></i>{{content.status}}</p>
+                                <p> <i [ngClass]="getSpeciesIcon(content.species)" class="pe-2"></i>{{content.species}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="backside">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="rounded back-content">
+                            <div class="pt-5">
+                                <h4 class="card-title">{{content.name}}</h4>
+                                <div class="d-flex justify-content-center align-items-center pt-2">
+                                    <p class="pe-3"> <i [ngClass]="getStatusIcon(content.status)" class="pe-2"
+                                            [ngStyle]="{'color': getStatusColor(content.status)}"></i>{{content.status}}</p>
+                                    <p> <i [ngClass]="getSpeciesIcon(content.species)" class="pe-2"></i>{{content.species}}
+                                    </p>
+                                </div>
+                            </div>
+            
+                            <div class="pb-5">
+                                <p class="" *ngIf="content.type !== ''"> Type: {{content.type}}</p>
+                                <p> Gender: {{content.gender}}</p>
+                                <p> Origin: {{content.origin.name}}</p>
+                                <p> Location: {{content.location.name}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
