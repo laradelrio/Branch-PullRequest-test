@@ -28,7 +28,10 @@ export class HomeComponent implements OnInit {
 
   getCharacter() {
     this.rmApiService.getCharacter(1, this.searchValue, this.filterParameters) 
-    .subscribe((resp) => this.characters = resp.results)
+    .subscribe({
+      next: (resp) => (this.characters = resp.results),
+      error: (error) => (this.characters = []),
+    })
   }
 
   getMoreCharacters() {

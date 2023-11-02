@@ -1,3 +1,14 @@
+.no-characters-div{
+    background: rgba(240, 248, 255, 0.131);
+}
+
+.no-characters-msg{
+    background:#0D7C85;
+    border: solid 2px;
+    border-color: #BED262;
+}
+
+
 @media (max-width: 768px){
     app-shared-sidebar-filter{
         width: 75%
