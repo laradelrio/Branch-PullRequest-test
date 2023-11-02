@@ -1,7 +1,7 @@
 <app-shared-search-bar (searchClicked)="addSearchedValue($event)"></app-shared-search-bar>
 <div class="d-flex flex-wrap col justify-content-center">
     <app-shared-sidebar-filter (filterClicked)="addFilterParameters($event)" class="col-2"></app-shared-sidebar-filter>
-    <div class="container d-flex col justify-content-center flex-wrap align-items-center">
+    <div class="container d-flex col justify-content-center flex-wrap align-items-start">
         <div *ngFor="let character of characters" class="m-4">
             <app-shared-base-card [content]="character"></app-shared-base-card>
         </div>

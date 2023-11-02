@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Result } from '@app/data/interfaces/character.interface';
 import { RickyMortyApiService } from '@app/data/servicesapi/ricky-morty-api.service';
 import { ToTopBtnComponent } from '@app/shared/components/to-top-btn/to-top-btn.component';
+import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -26,10 +27,8 @@ export class HomeComponent implements OnInit {
   }
 
   getCharacter() {
-    this.rmApiService.getCharacter(1, this.searchValue, this.filterParameters)
-      .subscribe((resp) => this.characters = resp.results)
-
-      this.searchValue='';
+    this.rmApiService.getCharacter(1, this.searchValue, this.filterParameters) 
+    .subscribe((resp) => this.characters = resp.results)
   }
 
   getMoreCharacters() {
@@ -54,14 +53,15 @@ export class HomeComponent implements OnInit {
     this.toTopBtn.backToTopBtnDisplay();
   }
 
-  addFilterParameters(parameters: string){
+  addFilterParameters(parameters: string) {
     this.filterParameters = parameters;
     this.getCharacter();
   }
 
   //add search input to api call url
-  addSearchedValue(value: string){
-    this.searchValue = `&name${value}`;
+  addSearchedValue(value: string) {
+    this.searchValue = '';
+    this.searchValue = `&name=${value}`;
     this.getCharacter();
   }
 
