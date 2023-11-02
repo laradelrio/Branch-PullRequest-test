@@ -16,7 +16,6 @@ export class RickyMortyApiService {
   }
 
   getCharacter(pageNum: number, search: string, params: string): Observable<CharacterAPIResp>{
-    console.log(`${this.baseCharacter}?page=${pageNum}${search}${params}`)
     return this.http.get<CharacterAPIResp>(`${this.baseCharacter}?page=${pageNum}${search}${params}`);
   }
   
