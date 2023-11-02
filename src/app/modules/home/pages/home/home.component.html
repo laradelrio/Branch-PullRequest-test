@@ -1,20 +1,20 @@
 <app-shared-search-bar (searchClicked)="addSearchedValue($event)"></app-shared-search-bar>
+
 <div class="d-flex flex-wrap col justify-content-center">
     <app-shared-sidebar-filter (filterClicked)="addFilterParameters($event)" class="col-2"></app-shared-sidebar-filter>
     <div class="container d-flex col justify-content-center flex-wrap align-items-start">
         <div class="m-4 rounded no-characters-div">
             <div *ngIf="characters.length === 0" class="m-4 p-4 rounded text-center no-characters-msg">
                 <h5 class="m-4 text-white"> <strong> No Characters Found </strong> </h5>
-                <p class="text-white">There are no characters that match your current filters and/or search. Try removing some of them to get better results.</p>
+                <p class="text-white">There are no characters that match your current filters and/or search. Try
+                    removing some of them to get better results.</p>
             </div>
         </div>
-        
-                
+
         <div *ngFor="let character of characters" class="m-4">
             <app-shared-base-card [content]="character"></app-shared-base-card>
         </div>
     </div>
 </div>
-
 
 <app-shared-to-top-btn #toTopBtn></app-shared-to-top-btn>
