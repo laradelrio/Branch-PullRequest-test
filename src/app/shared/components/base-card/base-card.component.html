@@ -19,23 +19,23 @@
             </div>
             <div class="backside">
                 <div class="card">
-                    <div class="card-body text-center">
-                        <div class="rounded back-content">
-                            <div class="pt-5">
+                    <div class="card-body text-center d-flex justify-content-center align-items-center">
+                        <div class="rounded back-content pe-3 ps-3">
+                            <div class="pt-3">
                                 <h4 class="card-title">{{content.name}}</h4>
-                                <div class="d-flex justify-content-center align-items-center pt-2">
+                                <div class="d-flex justify-content-center align-items-center ">
                                     <p class="pe-3"> <i [ngClass]="getStatusIcon(content.status)" class="pe-2"
                                             [ngStyle]="{'color': getStatusColor(content.status)}"></i>{{content.status}}</p>
                                     <p> <i [ngClass]="getSpeciesIcon(content.species)" class="pe-2"></i>{{content.species}}
                                     </p>
                                 </div>
+                                <hr>
                             </div>
-            
-                            <div class="pb-5">
-                                <p class="" *ngIf="content.type !== ''"> Type: {{content.type}}</p>
-                                <p> Gender: {{content.gender}}</p>
-                                <p> Origin: {{content.origin.name}}</p>
-                                <p> Location: {{content.location.name}}</p>
+                            <div class="pb-3">
+                                <p class="" *ngIf="content.type !== ''"> <strong> Type: </strong> {{content.type}}</p>
+                                <p> <strong> Gender: </strong> {{content.gender}}</p>
+                                <p> <strong> Origin: </strong> {{content.origin.name}}</p>
+                                <p> <strong> Location: </strong> {{content.location.name}}</p>
                             </div>
                         </div>
                     </div>

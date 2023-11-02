@@ -1,15 +1,12 @@
 .card-body{
     min-height: 20rem;
     width:19rem;
+    min-height: 22rem;
 }
 
 .card{
     width:19rem;    
     background-color: rgba(240, 248, 255, 0.131);
-}
-
-ul{
-    text-decoration: none;
 }
 
 .front-content{
@@ -86,6 +83,7 @@ section .section-title {
     top: 0;
     left: 0;
     background: rgba(240, 248, 255, 0.131);
+    min-height: 22rem;
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
