@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
     let amountScrolled = document.documentElement.scrollTop + window.innerHeight + 50;
     let initialGet = this.characters.length === 0;
 
-    if (this.pagesNum <= 43 && !initialGet && (amountScrolled >= docHeight)) {
+    if (this.pagesNum <= 42 && !initialGet && (amountScrolled >= docHeight)) {
       this.getMoreCharacters();
     }
 
