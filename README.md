@@ -12,7 +12,7 @@
   <p>This project is a technical test for the Jump2Digital Hackathon 2023 <br>
   Learn More:    
     <a href="https://jump2digital.site/es/hackathon/">Jump2Digital</a>
-    
+  <br>
   <br>
     <strong>Project Description</strong>
 
@@ -51,8 +51,10 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+<p align="center">
+  <img src="images/web-screenshot.png" alt="Logo" height="400">
+</p>
 
-<img src="images/web-screenshot.png" alt="Logo"  height="200">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
