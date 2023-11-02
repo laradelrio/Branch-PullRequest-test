@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center align-items-center  m-0">
     <div class="input-group w-75 mt-5 mb-5">
-        <input [(ngModel)]="searchInput" id="search-input" type="search" id="form1" class="form-control" placeholder="Search" (keyup)="onSearch()"/>    
+        <input [(ngModel)]="searchInput" id="search-input" type="search" id="form1" class="form-control" placeholder="Search" (search)="onSearch()" (keyup)="onSearch()"/>    
         <button id="search-button" type="button" class="btn pe-5 ps-5" (click)="onSearch()">
             <i class="fas fa-search"></i>
         </button>
