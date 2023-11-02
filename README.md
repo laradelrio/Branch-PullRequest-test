@@ -1,27 +1,127 @@
-# RickAndMorty
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+<a name="readme-top"></a>
 
-## Development server
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="images/Rick-and-Morty.png" alt="Logo" height="200">
+  </a>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<h1 align="center">Rick And Morty</h1>
+  <p>This project is a technical test for the Jump2Digital Hackathon 2023 <br>
+  Learn More:    
+    <a href="https://jump2digital.site/es/hackathon/">Jump2Digital</a>
+    
+  <br>
+    <strong>Project Description</strong>
 
-## Code scaffolding
+  It showcases characters from the 'Rick and Morty' series using a public API and features responsive design, character search, filtering, and infinite scroll functionality.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  <p align="center">
+    <a href="https://github.com/laradelrio/RickAndMorty">View Demo</a>
+  </p>
+</div>
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#development-server">Development server</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-## Further help
+<img src="images/web-screenshot.png" alt="Logo"  height="200">
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Built With
+
+* [![Angular][Angular.io]][Angular-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/laradelrio/RickAndMorty.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+### Development server
+
+1. Run
+   ```sh
+   ng serve
+   ```
+  2. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [X] Character showcase from 'Rick and Morty' series via public API.
+- [X] Responsive design for a user-friendly experience.
+- [X] Filter options for precise character selection.
+- [X] Infinite scroll for seamless exploration.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- CONTACT -->
+## Contact
+
+Lara Del Rio Garcia - lara.delrio333@gmail.com
+
+Project Link: [https://github.com/laradelrio/RickAndMorty](https://github.com/laradelrio/RickAndMorty)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: www.linkedin.com/in/lara-del-rio-garcia
+[product-screenshot]: images/screenshot.png
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]: https://angular.io/
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
