@@ -19,7 +19,7 @@
   It showcases characters from the 'Rick and Morty' series using a public API and features responsive design, character search, filtering, and infinite scroll functionality.
 
   <p align="center">
-    <a href="https://github.com/laradelrio/RickAndMorty">View Demo</a>
+    <a href="https://rick-and-morty-jump2digital.vercel.app/">View Demo</a>
   </p>
 </div>
 
